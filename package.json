@@ -1,0 +1,28 @@
+{
+  "name": "buy-and-sell-it",
+  "version": "1.0.0",
+  "description": "An e-commerce (back-end) site using Object Relational Mapping",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felicitybrammer/buy-and-sell-it.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felicitybrammer/buy-and-sell-it/issues"
+  },
+  "homepage": "https://github.com/felicitybrammer/buy-and-sell-it#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.12.0-beta.1"
+  }
+}
