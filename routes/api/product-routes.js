@@ -8,15 +8,16 @@ router.get('/', (req, res) => {
   // find all products
   console.log('=====================================');
   Product.findAll({
-    attributes: ['id', 'product_name', 'price', 'stock'],
+    attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
     include: [
       {
         model: Category,
-        attributes: ['id']
+        attributes: ['id', 'category_name']
       },
       {
         model: Tag,
-        attributes: ['id']
+        attributes: ['id', 'tag_name'],
+        through: ProductTag
       }
     ]
   })
@@ -35,15 +36,16 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'product_name', 'price', 'stock'],
+    attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
     include: [
       {
         model: Category,
-        attributes: ['id']
+        attributes: ['id', 'category_name']
       },
       {
         model: Tag,
-        attributes: ['id']
+        attributes: ['id', 'tag_name'],
+        through: ProductTag
       }
     ]
   })

@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ['id'] //or product_id
+        attributes: ['id', 'product_name'] //or product_id
       }
     ]
   })
